@@ -1022,7 +1022,7 @@ class FlutterActorImage extends ActorImage with FlutterActorDrawable {
     updateVertexPositionBuffer(_vertexBuffer, false);
 
     _canvasVertices = ui.Vertices.raw(ui.VertexMode.triangles, _vertexBuffer,
-        indices: _indices, textureCoordinates: _uvBuffer);
+        indices: Uint16List.fromList(_indices), textureCoordinates: _uvBuffer);
     return true;
   }
 
